@@ -201,7 +201,30 @@ table { border-collapse: collapse; border-spacing: 0; }
    Author: 
    ========================================================================== */
 
-html { height: 100%; width:100% }
+* { margin: 0; }
+
+html, body, #container { height: 100%; width:100% }
+
+header { height: 101px; width: 647px; position: absolute; top: 30%; left: 50%; margin-top: -50px; margin-left: -323px; } 
+
+#main { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -30px; }
+
+@-webkit-keyframes spaceboots {
+    0% { -webkit-transform: scale(1); }
+    30% { -webkit-transform: scale(0.9); }
+    40% { -webkit-transform: scale(1); }
+    70% { -webkit-transform: scale(0.8); }
+    90% { -webkit-trandform: scale(1); }
+    100% { -webkit-transform: scale(1); }
+}
+
+.shake:hover, .shake:focus, a:hover, a:focus { -webkit-animation-name: 'spaceboots'; -webkit-animation-duration: 0.86s; -webkit-transform-origin: 30% 70%; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; }
+
+.shake { display:block; position:relative; }
+
+footer, .push { height: 30px; }
+
+footer { border-top: 1px solid #000; }
 
 /* =============================================================================
    Non-semantic helper classes
